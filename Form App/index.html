@@ -1,0 +1,329 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <!--css styles start here-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link rel="stylesheet" href="style.css">
+    <!--css styles end here-->
+
+</head>
+<body>
+  <!--our form start here with the basic questions -->
+  <div class="container title">
+    <h1 class ="center-text">Pasbanc Form</h1>
+    <!--this error -msg shows up if certain fields are not filled-->
+    <div id="errorMsg"></div>
+  </div>
+  <form action="">
+    <div class="main-content container">
+       
+ <!--this row is for the first and last Name-->
+      <div class="row">
+        <!--this first input is for the first name and covers half of the page-->
+        <!--since am using the materialise css for faster work 
+          or so i thought the class input-field is  mandatory-->
+        <div class="input-field col s6">
+          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+          <!--the class active is mandatory to  avoid overlap of placeholder text with the input text-->
+          <label for="first_name" class="active">First Name
+          <span class="required">*</span>
+          </label>
+        </div>
+          <!--this first input is for the last name and covers the other half with first name -->
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate">
+            <!--the class active is mandatory to  avoid overlap of placeholder text with the input text-->
+          <label for="last_name"  class="active">Last Name
+           <span class="required">*</span>
+          </label>
+        </div>
+      </div>
+      <!--end of row containing the full name-->
+      <!--the start of the other information about the user-->
+      <div class="row">
+        <!--this first segment is for input age-->
+        <!--input field is mandatory-->
+        <div class="input-field col s12">
+          <input  id="age" type="text" class="validate">
+          <label for="age" class="active">Age
+          <span class="required">*</span>
+          </label>
+        </div>
+      <!--end of input age-->
+
+       <!--this  segment is for input residence-->
+        <!--input field is mandatory-->
+        <div class="input-field col s12">
+          <input id="residence" type="text" class="validate">
+          <label for="reisdence" class="active">Residence
+          <span class="required">*</span>
+          </label>
+        </div>
+        <!--end of input residence-->
+
+         <!--this  segment is for input contact-->
+        <!--input field is mandatory-->
+          <div class="input-field col s12">
+          <input id="contact" type="text" class="validate">
+          <label for="reisdence" class="active">Phone number/Email
+          <span class="required">*</span>
+          </label>
+        </div>
+       <!--end of input contact-->
+
+
+       <!--this  segment is for input gender-->
+        <!--input field is mandatory-->
+        <div class="input-field col s12" id="gender">
+          Gender
+      <p>
+        <!--label tag is mandatory-->
+         <!--beginning of first radio button-->
+    <label>
+      <input class="with-gap" name="group1" type="radio" value="female" />
+      <!--this span is mandatory-->
+      <span>Female</span>
+    </label>
+  </p>
+  <!--beginning of second radio button-->
+  <p>
+        <!--label tag is mandatory-->
+    <label>
+      <input class="with-gap" name="group1" type="radio" value="male" />
+       <!--this span is mandatory-->
+      <span>male</span>
+    </label>
+  </p>
+        </div>
+          <!--end of input gender-->
+    </div>
+
+    <!--the end of other info about user-->
+
+    <!--these are questions for the user-->
+     <div id="questions">
+       <h4>Questions</h4>
+           <div class="row">
+        <div class="input-field col s12"id="save">
+          Do you save?
+      <p>
+    <label>
+      <input class="with-gap" name="group2" type="radio" value="Yes" />
+      <span>Yes</span>
+    </label>
+  </p>
+  <p>
+    <label>
+      <input class="with-gap" name="group2" type="radio" value="No" />
+      <span>No</span>
+    </label>
+  </p>
+      </div>
+      
+  
+     
+        <div class="input-field col s12">
+          Why do you save?
+          <textarea id="textarea1" class="materialize-textarea"></textarea>
+        </div>
+     
+        <div class="input-field col s12" id="invest">
+          Do you invest?
+      <p>
+    <label>
+      <input class="with-gap" name="group3" type="radio" value ="Yes"/>
+      <span>Yes</span>
+    </label>
+  </p>
+  <p>
+    <label>
+      <input class="with-gap" name="group3" type="radio" value ="No" />
+      <span>No</span>
+    </label>
+  </p>
+        </div>
+      
+
+      
+        <div class="input-field col s12">
+          Why do you invest?
+          <textarea id="textarea2" class="materialize-textarea"></textarea>
+        </div>
+     
+    
+<!--areas of interest-->
+         
+        <div class="input-field col s12" id="areas">
+          Which areas are you interested in investing in?
+              <p>
+      <label>
+        <input type="checkbox" class="filled-in" value="Food produce" />
+        <span> Food produce</span>
+      </label>
+    </p>
+        <p>
+      <label>
+        <input type="checkbox" class="filled-in" value="Animal produce"/>
+        <span>Animal produce</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" class="filled-in" value="ICT"/>
+        <span> ICT </span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" class="filled-in" value="Services" />
+        <span>Services</span>
+      </label>
+    </p>
+
+
+        </div>
+      
+
+       
+        <div class="input-field col s12">
+          Why are you interested in these areas?
+          <textarea id="textarea3" class="materialize-textarea"></textarea>
+        </div>
+    
+    
+     <div class="input-field col s12">
+      What is your occupation?
+    <select class="browser-default" id="occupations">
+      <option value="" disabled selected>Choose your option</option>
+      <option value="student">Student</option>
+      <option value="Employed">Employed</option>
+      <option value="Self-Employed">Self-Employed</option>
+    </select>
+  </div>
+</div>
+</div>
+<!--this is the beginning of additional questions for the user who is employed-->
+<div id="addQns">
+   <div class="row">
+        <div class="input-field col s12">
+          Who do you work for?
+          <textarea id="textarea3" class="materialize-textarea"></textarea>
+        </div>
+
+        <div class="input-field col s12">
+         Do you have a pension/retirement plan?
+          <textarea id="textarea4" class="materialize-textarea"></textarea>
+        </div>
+      
+        <div class="input-field col s12">
+          How much do you earn?
+        
+         <p>
+    <label>
+      <input class="with-gap" name="group3" type="radio"  />
+      <span>UGX 0-50,000</span>
+    </label>
+  </p>
+  <p>
+    <label>
+      <input class="with-gap" name="group3" type="radio"  />
+      <span>UGX 50,001-500,000</span>
+    </label>
+  </p>
+   <p>
+    <label>
+      <input class="with-gap" name="group3" type="radio"  />
+      <span>UGX 500,001-1,000,000</span>
+    </label>
+  </p> <p>
+    <label>
+      <input class="with-gap" name="group3" type="radio"  />
+      <span>UGX 1,000,001-5,000,000</span>
+    </label>
+  </p>
+
+      </div>
+</div>
+
+</div>
+
+  <!--this is the beginning of extra questions for the user who is self-employed-->
+
+      <div id="xtraQns">
+         <div class="row">
+        <div class="input-field col s12">
+         What business kind of business do you run?
+          <textarea id="textarea5" class="materialize-textarea"></textarea>
+        </div>
+     
+        <div class="input-field col s12">
+          What is the primary source of income for your business?
+          <textarea id="textarea6" class="materialize-textarea"></textarea>
+        </div>
+     
+        <div class="input-field col s12">
+          How much do you earn?
+        
+         <p>
+    <label>
+      <input class="with-gap" name="group3" type="radio"  />
+      <span>UGX 0-50,000</span>
+    </label>
+  </p>
+  <p>
+    <label>
+      <input class="with-gap" name="group3" type="radio"  />
+      <span>UGX 50,001-500,000</span>
+    </label>
+  </p>
+   <p>
+    <label>
+      <input class="with-gap" name="group3" type="radio"  />
+      <span>UGX 500,001-1,000,000</span>
+    </label>
+  </p> <p>
+    <label>
+      <input class="with-gap" name="group3" type="radio"  />
+      <span>UGX 1,000,001-5,000,000</span>
+    </label>
+  </p>
+
+      </div>
+      
+      </div>
+
+     </div>
+   <!--the end of extra questions -->
+  
+    <!--my submit btn for my form-->
+    <input type="SUBMIT" class="float-right btn btn-primary" id="submit">
+  </div>
+  <!--end of main-content container-->
+  </form>
+  <!--from ends here-->
+
+
+  <!--the template is a modal-->
+  <!--template with all the user info-->
+  <div id="modal">
+  <!--beginning of modal content-->
+ <div id="modalContent">
+  <!--modal header-->
+  <div id="modalHeader">
+    <h1>Signup complete</h1>
+  </div>
+  <!-- end of modal header-->
+  <!--modal footer-->
+   <div id="modalFooter">
+   Thank you for registering with us.An email has been sent to your email adresss/phone number <br>
+   <a href="#"><button id="btn">Next</button></a>
+ </div>
+ <!--end of modal footer-->
+ </div>
+ <!--end of modal content-->
+  </div>
+  <!--end of modal-->
+  <script src="index.js"></script>
+</body>
+</html>
